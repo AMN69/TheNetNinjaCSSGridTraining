@@ -9,10 +9,10 @@
 			text-align: center;
 		}
 		#content{
-			display: grid;
-			/*grid-template-columns: 30% 20% 50%;*/
-			/*grid-template-columns: 1fr 2fr 1fr;*/
-			grid-template-columns: repeat(3, 1fr);
+			display: grid; /* This makes the element with content id a grid element */
+			/*grid-template-columns: 30% 20% 50%;*/ /* Makes columns with different width */
+			/*grid-template-columns: 1fr 2fr 1fr;*/ /* fr stands for fractions, the middle column is twice the others */
+			grid-template-columns: repeat(3, 1fr); /* This defines the number of columns */
 			max-width: 960px;
 			margin: 0 auto;
 		}
@@ -20,7 +20,7 @@
 			background: #3bbced;
 			padding: 30px;
 		}
-		#content div:nth-child(even){
+		#content div:nth-child(even){ /* Even elements have grey color */
 			background: #777;
 			padding: 30px;
 		}
@@ -28,6 +28,7 @@
 </head>
 <body>
 
+	<!-- This is the grid -->
 	<div id="content">
 
 		<div>1</div>
