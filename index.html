@@ -17,7 +17,7 @@
 			margin: 0 auto;
             grid-template-areas:
                 "header header header header"
-                "aside . main main"
+                "aside . main main" /* AMN - the point means a gap */
                 "nav . main main"
                 "section section section section"
                 "section section section section"
@@ -28,7 +28,7 @@
 			padding: 30px;
 		}
         header{
-            grid-area: header;
+            grid-area: header; /* AMN - we link the tag name with the grid name that we will use in the template-areas above */
         }
         main{
             grid-area: main;
