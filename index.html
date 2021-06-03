@@ -11,11 +11,15 @@
 		#content{
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
-			/*grid-auto-rows: minmax(150px, auto);*/
+			/* The min high of the row is 150px and the max is auto (what's needed) */
+			/* In case we leave only 150px the high would be limited and not all the content would fit within the cell */
+			/* grid-auto-rows: minmax(150px, auto);  */
+			/* grid-template-rows: 200px 300px 400px 200px; 1st, 2nd, 3rd, 4th row (even if you can't see it) */
 			grid-template-rows: repeat(3, minmax(150px, auto));
-			/*grid-row-gap: 10px;
-			grid-column-gap: 10px;*/
-			grid-gap: 10px;
+			/* grid-gap is better than margin because that only puts gap between touching cells meanwhile margin needs to be specified by each side */
+			/*grid-row-gap: 10px;*/ 
+			/* grid-column-gap: 10px; */
+			grid-gap: 10px; 
 			max-width: 960px;
 			margin: 0 auto;
 		}
